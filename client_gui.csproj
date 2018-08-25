@@ -1,0 +1,379 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BA3AD16-9897-48A9-BA75-705D4269ECB3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>client_gui</RootNamespace>
+    <AssemblyName>client_gui</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddRecipe.aspx" />
+    <Content Include="AddToCookBook.aspx" />
+    <Content Include="Admin\AllRecipe.aspx" />
+    <Content Include="Admin\AllUser.aspx" />
+    <Content Include="Cookbook.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\Lec04_0212.png" />
+    <Content Include="images\page1_img1.png" />
+    <Content Include="images\page1_img2.png" />
+    <Content Include="images\page1_img3.png" />
+    <Content Include="images\page1_img4.png" />
+    <Content Include="images\slide.png" />
+    <Content Include="logout.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="SearchRecipe.aspx" />
+    <Content Include="Site1.Master" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Register\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Change_pwd.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register\Register.aspx" />
+    <Content Include="Admin\Search_Recipe.aspx" />
+    <Content Include="style\temp\about-us.html" />
+    <Content Include="style\temp\contacts.html" />
+    <Content Include="style\temp\css\form.css" />
+    <Content Include="style\temp\css\grid.css" />
+    <Content Include="style\temp\css\ie.css" />
+    <Content Include="style\temp\css\prettyPhoto.css" />
+    <Content Include="style\temp\css\reset.css" />
+    <Content Include="style\temp\css\slider.css" />
+    <Content Include="style\temp\css\style.css" />
+    <Content Include="style\temp\css\superfish.css" />
+    <Content Include="style\temp\images\big1.jpg" />
+    <Content Include="style\temp\images\big2.jpg" />
+    <Content Include="style\temp\images\big3.jpg" />
+    <Content Include="style\temp\images\big4.jpg" />
+    <Content Include="style\temp\images\favicon.ico" />
+    <Content Include="style\temp\images\hor_separator.png" />
+    <Content Include="style\temp\images\logo.png" />
+    <Content Include="style\temp\images\magnify.png" />
+    <Content Include="style\temp\images\marker.png" />
+    <Content Include="style\temp\images\page1_img1.jpg" />
+    <Content Include="style\temp\images\page1_img2.jpg" />
+    <Content Include="style\temp\images\page1_img3.jpg" />
+    <Content Include="style\temp\images\page1_img4.jpg" />
+    <Content Include="style\temp\images\page2_img1.jpg" />
+    <Content Include="style\temp\images\page2_img2-1.png" />
+    <Content Include="style\temp\images\page2_img2.png" />
+    <Content Include="style\temp\images\page2_img3.jpg" />
+    <Content Include="style\temp\images\page2_img4.jpg" />
+    <Content Include="style\temp\images\page2_img5.jpg" />
+    <Content Include="style\temp\images\page2_img6.jpg" />
+    <Content Include="style\temp\images\page3_img1.jpg" />
+    <Content Include="style\temp\images\page3_img2.jpg" />
+    <Content Include="style\temp\images\page3_img3.jpg" />
+    <Content Include="style\temp\images\page3_img4.jpg" />
+    <Content Include="style\temp\images\page3_img5.jpg" />
+    <Content Include="style\temp\images\page3_img6.jpg" />
+    <Content Include="style\temp\images\page4_img1.jpg" />
+    <Content Include="style\temp\images\page4_img2.jpg" />
+    <Content Include="style\temp\images\page4_img3.jpg" />
+    <Content Include="style\temp\images\page4_img4.jpg" />
+    <Content Include="style\temp\images\page5_img1.jpg" />
+    <Content Include="style\temp\images\page5_img2.jpg" />
+    <Content Include="style\temp\images\pagination.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\default\sprite.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="style\temp\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="style\temp\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="style\temp\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="style\temp\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="style\temp\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="style\temp\images\prevnext.png" />
+    <Content Include="style\temp\images\slide.jpg" />
+    <Content Include="style\temp\images\slide1.jpg" />
+    <Content Include="style\temp\images\slide2.jpg" />
+    <Content Include="style\temp\images\socials.png" />
+    <Content Include="style\temp\images\spacer.png" />
+    <Content Include="style\temp\images\Web_Welcome_2.png" />
+    <Content Include="style\temp\images\welcome_img.png" />
+    <Content Include="style\temp\index.html" />
+    <Content Include="style\temp\js\camera.js" />
+    <Content Include="style\temp\js\forms.js" />
+    <Content Include="style\temp\js\html5shiv.js" />
+    <Content Include="style\temp\js\jquery-migrate-1.1.1.js" />
+    <Content Include="style\temp\js\jquery.carouFredSel-6.1.0-packed.js" />
+    <Content Include="style\temp\js\jquery.easing.1.3.js" />
+    <Content Include="style\temp\js\jquery.equalheights.js" />
+    <Content Include="style\temp\js\jquery.js" />
+    <Content Include="style\temp\js\jquery.prettyPhoto.js" />
+    <Content Include="style\temp\js\PIE.htc" />
+    <Content Include="style\temp\js\sForm.js" />
+    <Content Include="style\temp\js\superfish.js" />
+    <Content Include="style\temp\js\tms-0.4.1.js" />
+    <Content Include="style\temp\menu.html" />
+    <Content Include="style\temp\news.html" />
+    <Content Include="style\temp\portfolio.html" />
+    <Content Include="style\temp\readme.txt" />
+    <Content Include="Update_Recipe.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRecipe.aspx.cs">
+      <DependentUpon>AddRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRecipe.aspx.designer.cs">
+      <DependentUpon>AddRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCookBook.aspx.cs">
+      <DependentUpon>AddToCookBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCookBook.aspx.designer.cs">
+      <DependentUpon>AddToCookBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AllRecipe.aspx.cs">
+      <DependentUpon>AllRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AllRecipe.aspx.designer.cs">
+      <DependentUpon>AllRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AllUser.aspx.cs">
+      <DependentUpon>AllUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AllUser.aspx.designer.cs">
+      <DependentUpon>AllUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Change_pwd.aspx.cs">
+      <DependentUpon>Change_pwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Change_pwd.aspx.designer.cs">
+      <DependentUpon>Change_pwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookbook.aspx.cs">
+      <DependentUpon>Cookbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookbook.aspx.designer.cs">
+      <DependentUpon>Cookbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CookBook.cs" />
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe.cs" />
+    <Compile Include="Register\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Search_Recipe.aspx.cs">
+      <DependentUpon>Search_Recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Search_Recipe.aspx.designer.cs">
+      <DependentUpon>Search_Recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rep.cs" />
+    <Compile Include="SearchRecipe.aspx.cs">
+      <DependentUpon>SearchRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchRecipe.aspx.designer.cs">
+      <DependentUpon>SearchRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Recipe.aspx.cs">
+      <DependentUpon>Update_Recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update_Recipe.aspx.designer.cs">
+      <DependentUpon>Update_Recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50532</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50532/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
